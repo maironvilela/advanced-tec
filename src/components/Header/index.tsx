@@ -1,8 +1,8 @@
 import styles from './header.module.scss';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import logo from '../../../public/images/logo.svg';
+import { Link } from '../Link';
 
 export function Header() {
   return (
@@ -11,18 +11,10 @@ export function Header() {
 
       <nav>
         <ul>
-          <li>
-            <Link href="#">HOME</Link>
-          </li>
-          <li>
-            <Link href="#">AUTOMAÇÃO</Link>
-          </li>
-          <li>
-            <Link href="#">AUDIO E VIDEO</Link>
-          </li>
-          <li>
-            <Link href="#">SEGURANÇA ELETRÔNICA</Link>
-          </li>
+          <Link description="HOME" />
+          <Link description="AUTOMAÇÃO" />
+          <Link description="AUDIO E VIDEO" isActive={true} />
+          <Link description="SEGURANÇA ELETRÔNICA" />
         </ul>
       </nav>
     </header>

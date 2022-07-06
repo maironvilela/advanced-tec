@@ -1,0 +1,22 @@
+ 
+.active{
+  color: var(--blue-100);
+  position: relative;
+  a:hover{
+    filter:none;
+  }
+  a:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    border-style: solid;
+    border-color: var(--white) transparent;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+} 
+
+
+
+ 
