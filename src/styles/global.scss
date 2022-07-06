@@ -1,11 +1,17 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding:0;
  }
 
  :root{
+    --black: #28262E;
    --white: #FFFFFF; 
+   --white-100: #D9D9D9; 
+   --blue-100: #60AFF8;
+   --blue-200:#001E40;
+   --blue-300: #030917;
+   --blue-100: #60AFF8;
  }
 
 html {
@@ -15,8 +21,8 @@ html {
  
 body {
   height: 100vh; 
-  background: #030917;
-  color: "#FFF";
+  background: var(--white-100);
+  color: var(--white);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
 } 

@@ -1,0 +1,22 @@
+.container{
+  padding: 1rem;
+  background: var(--blue-300);
+  opacity: 0.8;
+  max-height: 9rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+ 
+  nav{
+    margin-left: auto;
+    li{
+      display: inline;
+      margin-right: 2rem;
+    }
+
+   
+  
+  }
+ 
+}
