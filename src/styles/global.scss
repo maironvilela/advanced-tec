@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+
+ :root{
+   --white: #FFFFFF; 
+ }
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+} 
+ 
+body {
+  height: 100vh; 
+  background: #030917;
+  color: "#FFF";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+} 
+ 
+
+body,input, textarea, select, button{
+  font: 400 1.6rem "Roboto",sans-serif;
+}
+ 
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 700;
+}
+h1{
+  font-size: 6rem;
+}
+
+h2{
+  font-size: 5.2rem;
+}
+
+h3{
+  font-size:4.4rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
