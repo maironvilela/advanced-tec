@@ -11,9 +11,9 @@ export function Header() {
 
       <nav>
         <ul>
-          <Link description="HOME" />
+          <Link description="HOME" isActive={true} />
           <Link description="AUTOMAÇÃO" />
-          <Link description="AUDIO E VIDEO" isActive={true} />
+          <Link description="AUDIO E VIDEO" />
           <Link description="SEGURANÇA ELETRÔNICA" />
         </ul>
       </nav>
