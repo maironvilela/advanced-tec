@@ -16,7 +16,7 @@ export function WhyChoose() {
           </li>
           <li>
             <Image src={iconCheck} alt="icon" />
-            Satisfação dos clientes garantido
+            Satisfação dos clientes garantida
           </li>
           <li>
             <Image src={iconCheck} alt="icon" />
@@ -28,7 +28,7 @@ export function WhyChoose() {
           </li>
           <li>
             <Image src={iconCheck} alt="icon" />
-            Melhore pós venda
+            Melhor pós venda
           </li>
         </ul>
 
