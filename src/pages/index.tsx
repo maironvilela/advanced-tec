@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { About } from '../components/About';
 import { Carousel } from '../components/Carousel';
 import { Header } from '../components/Header';
+import { WhyChoose } from '../components/why-choose';
 
 const Home: NextPage = () => {
   return (
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
       <Header />
       <Carousel />
       <About />
+      <WhyChoose />
     </>
   );
 };
