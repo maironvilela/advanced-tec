@@ -18,14 +18,20 @@ export function Carousel() {
       <div className={styles.banner}>
         <Image src={banner01} alt="Banner" />
         <div>
-          <h3>Controle toda sua casa pelo seu celular de onde estiver</h3>
+          <h3>
+            Soluções em automação que lhe permite ter o controle de sua casa na
+            palma da mao
+          </h3>
           <button>Saiba Mais</button>
         </div>
       </div>
       <div className={styles.banner}>
         <Image src={banner02} alt="Banner" />
         <div>
-          <h3>Experiência de estar no cinema sem sair da sala de sua casa</h3>
+          <h3>
+            As soluções em audio e video lhe proporciona a experiência de cinema
+            na sala de sua casa
+          </h3>
           <button>Saiba Mais</button>
         </div>
       </div>
