@@ -4,14 +4,15 @@ import styles from './link.module.scss';
 type LinkProps = {
   description: string;
   isActive?: boolean;
+  href: string;
 };
 
 export function Link(props: LinkProps) {
-  const { description, isActive } = props;
+  const { description, isActive, href } = props;
 
   return (
     <li className={isActive ? styles.active : ''}>
-      <NextLink href="#">{description}</NextLink>
+      <NextLink href={href}>{description}</NextLink>
     </li>
   );
 }
