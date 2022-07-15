@@ -18,18 +18,18 @@ export function Header({ page = 'HOME' }: HeaderProps) {
           <Link description="HOME" isActive={page === 'HOME'} href="/" />
           <Link
             description="AUTOMAÇÃO"
-            isActive={page === 'AUTOMACAO'}
-            href="servicos/automacao"
+            isActive={page === 'automacao'}
+            href="/servicos/automacao"
           />
           <Link
             description="AUDIO E VIDEO"
             isActive={page === 'AUDIO E VIDEO'}
-            href="servicos/audio-video"
+            href="/servicos/audio-video"
           />
           <Link
             description="SEGURANÇA ELETRÔNICA"
             isActive={page === 'SEGURANCA ELETRONICA'}
-            href="servicos/seguranca-eletronica"
+            href="/servicos/seguranca-eletronica"
           />
         </ul>
       </nav>

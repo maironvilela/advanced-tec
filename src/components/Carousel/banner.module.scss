@@ -2,12 +2,13 @@
   position: relative;
 
   
-  img{
-    min-height: 70vh;  
-    }    
 }
 
 .banner{
+
+  img{
+    width: 100vw!important;
+   }
   div{
     position: absolute;
     bottom: 5%;

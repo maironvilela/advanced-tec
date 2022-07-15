@@ -17,14 +17,17 @@
 html {
   /* a cada 1rem será considera 10px */
   font-size: 62.5%;
+  overflow-x: hidden;
 } 
  
 body {
   height: 100vh; 
   background: var(--white);
-  color: var(--white);
+  color: var(--blue-300);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 } 
  
 
