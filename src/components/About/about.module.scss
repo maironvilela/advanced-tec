@@ -3,9 +3,9 @@
     padding-bottom: 5rem;
     color: var(--blue-300);
     padding: 2rem;
-   // background-image: url(../../../public//images//background-about.svg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-image: url(../../../public//images//background-about.svg);
+    background-size: cover;
+     background-repeat: no-repeat;
  
 
   h1{
@@ -15,7 +15,6 @@
 
    p{
     line-height: 3rem;
-    margin-top: 2rem;
-  
+    margin-top: 2rem;   
    }
 }
