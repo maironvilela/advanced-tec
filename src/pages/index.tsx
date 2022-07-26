@@ -3,6 +3,7 @@ import type { GetStaticProps } from 'next';
 import { About } from '../components/About';
 import { Carousel } from '../components/Carousel';
 import { Header } from '../components/Header';
+import { WhyChoose } from '../components/why-choose';
 import { createClient } from '../services/prismic';
 
 export type Banner = {
@@ -16,13 +17,18 @@ type PageProps = {
     banners: Banner[],
     about:{
       title: string,
-      content: string
+      content: string,
     }
+    whyChoose: {
+      title: string,
+      content: string,
+    }
+
   };
 };
 
 export default function Home({ page }: PageProps) {
-  const { banners, about } = page;
+  const { banners, about, whyChoose } = page;
 
    return (
     <>
@@ -30,6 +36,7 @@ export default function Home({ page }: PageProps) {
       <Header />
       <Carousel banners={banners} /> 
       <About title ={about.title} content={about.content} />
+      <WhyChoose title ={whyChoose.title} content={whyChoose.content}  />
 
       
       {/*  
@@ -70,14 +77,19 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
     content: prismicH.asHTML(response.data['about-content'])
   }
 
+  const whyChoose = {
+    title: prismicH.asHTML(response.data['why-choose-title']),
+    content: prismicH.asHTML(response.data['why-choose-content'])
+  }
+
 
   const page = {
     banners,
-    about
+    about, 
+    whyChoose, 
   };
 
-  console.log(about);
-
+ 
   return {
     props: { page },
     revalidate: 60 * 60 * 24 //24 horas

@@ -1,16 +1,31 @@
 import Image from 'next/image';
-import iconCheck from '../../../public/images/icon-check.svg';
 import iconWhy from '../../../public/images/icon-why.svg';
 import styles from './why-choose.module.scss';
 
-export function WhyChoose() {
+type WhyChooseProps = {
+  title: string;
+  content: string;
+ }
+
+export function WhyChoose({title, content}:WhyChooseProps) {
   return (
     <div className={styles.container}>
-      <h1>Por quê Escolher a Advanced Tec?</h1>
+       <div dangerouslySetInnerHTML={{ __html: title }}></div>
 
-      <div>
-        <ul>
-          <li>
+      <div className={styles.content}>
+
+      <div dangerouslySetInnerHTML={{ __html: content }}></div>
+      <Image src={iconWhy} alt="icon" />
+
+
+
+      </div>
+    </div>
+  );
+}
+
+{/**
+<li>
             <Image src={iconCheck} alt="icon" />
             Mao de obra qualificada
           </li>
@@ -30,10 +45,13 @@ export function WhyChoose() {
             <Image src={iconCheck} alt="icon" />
             Melhor pós venda
           </li>
-        </ul>
-
-        <Image src={iconWhy} alt="icon" />
-      </div>
-    </div>
-  );
-}
+          <li>
+            <Image src={iconCheck} alt="icon" />
+            Melhor pós venda
+          </li>
+          <li>
+            <Image src={iconCheck} alt="icon" />
+            Melhor pós venda
+          </li>
+      
+*/}

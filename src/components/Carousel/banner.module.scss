@@ -1,24 +1,19 @@
 .container{
   position: relative;  
-
-
-
-}
-
+ }
 .banner{
-
   img{
     width: 100vw!important;
    }
   div{
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     color: var(--white);
     line-height: 7rem;
     background-color: var(--blue-300);
     opacity: 0.5;
     width:100%;
-    padding:  5rem
+    padding:  1.5rem 5rem
    }  
 
     button{

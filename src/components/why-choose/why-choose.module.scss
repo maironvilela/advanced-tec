@@ -1,14 +1,13 @@
 .container{ 
-
     padding-bottom: 5rem;
     color: var(--blue-300);
     padding: 2rem;
     background-image: url(https://avatars.mds.yandex.net/i?id=5117bc7e6717ca6b428f7c7dc372f6c1-5498962-images-thumbs&n=13);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height: 50rem;  
-    height: 40rem;
 
+   
+  
   h1{
    text-align: center;
    margin-bottom: 2rem;
@@ -17,26 +16,20 @@
    margin-bottom: 5rem;
  } 
 
- img{
-  margin-top:7rem;
- }
+ .content{
+  position: relative;
 
- > div{
   display: grid;	
-  grid-template-columns: 1fr 40rem;
-
-  li{
-    display: flex;
-
-
-    list-style-type: none;
-    color: var(--white);
-    line-height:5rem;
-    font-size: 2.2rem;
-    font-weight: bold;
-   
+  grid-template-columns: 1fr 40rem ;
     
-  }
-
- }
+    li{
+      display: flex;
+      list-style-type: none;
+      color: var(--white);
+      line-height:5rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-left: 15rem;
+    } 
+ } 
 }
