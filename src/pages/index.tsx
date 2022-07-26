@@ -1,37 +1,58 @@
-import type { GetStaticProps, NextPage } from 'next';
-import { About } from '../components/About';
+import type { GetStaticProps } from 'next';
 import { Carousel } from '../components/Carousel';
-import { FloatingButton } from '../components/floating-button';
-import { Footer } from '../components/footer';
-import { Header } from '../components/Header';
-import { Services } from '../components/services';
-import { WhyChoose } from '../components/why-choose';
 import { createClient } from '../services/prismic';
 
-const Home: NextPage = () => {
+export type Banner = {
+  urlImage: string;
+  description: string;
+  urlService: string;
+};
+
+type PageProps = {
+  page: {
+    banners: Banner[];
+  };
+};
+
+export default function Home({ page }: PageProps) {
+  const { banners } = page;
+
+  console.log(banners);
   return (
     <>
-      <Header />
-      <Carousel />
+      <Carousel banners={banners} />
+      {/*   <Header />
+    <Header />
       <About />
       <WhyChoose />
       <FloatingButton />
       <Services />
-      <Footer />
+      <Footer /> */}
     </>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
 
-  const page = await client.getByUID('page', 'home-page');
+  const response = await client.getByUID('page', 'home-page');
 
-  console.log(JSON.stringify(page, null, 2));
+  const banners = response.data.body[0].items.map((item: any) => {
+    return {
+      urlImage: item.img.url,
+      description: item.description[0].text,
+      urlService: item.link.url
+    };
+  });
+
+  const page = {
+    banners: banners
+  };
+
+  console.log(page);
+
   return {
-    props: {},
+    props: { page },
     revalidate: 60 * 60 * 24 //24 horas
   };
 };
-
-export default Home;

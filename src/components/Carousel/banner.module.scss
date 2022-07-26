@@ -1,7 +1,8 @@
 .container{
-  position: relative;
+  position: relative;  
 
-  
+
+
 }
 
 .banner{
@@ -11,13 +12,13 @@
    }
   div{
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     color: var(--white);
     line-height: 7rem;
     background-color: var(--blue-300);
     opacity: 0.5;
     width:100%;
-    padding: 0 5rem
+    padding:  5rem
    }  
 
     button{

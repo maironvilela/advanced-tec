@@ -1,0 +1,71 @@
+{
+  "data": {
+    "body": [
+      {
+        "primary": {},
+        "items": [
+          {
+            "img": {
+              "dimensions": {
+                "width": 2048,
+                "height": 1536
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/slicemachine-blank/6b2bf485-aa12-44ef-8f06-dce6b91b9309_dancing.png?auto=compress,format"
+            },
+            "description": [
+              {
+                "type": "heading3",
+                "text": "Soluções em automação que lhe permite ter o controle de sua casa na",
+                "spans": []
+              }
+            ],
+            "link": {
+              "link_type": "Web",
+              "url": "http://localhost:3000/servicos/automacao"
+            },
+            "labellink": [
+              {
+                "type": "paragraph",
+                "text": "Saiba Mais",
+                "spans": []
+              }
+            ]
+          },
+          {
+            "img": {
+              "dimensions": {
+                "width": 2048,
+                "height": 1536
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/slicemachine-blank/26d81419-4d65-46b8-853e-8ea902e160c1_groovy.png?auto=compress,format"
+            },
+            "description": [
+              {
+                "type": "heading3",
+                "text": " As soluções em audio e video lhe proporciona a experiência de cinema",
+                "spans": []
+              }
+            ],
+            "link": {
+              "link_type": "Web",
+              "url": "http://localhost:3000/servicos/audio-video"
+            },
+            "labellink": [
+              {
+                "type": "paragraph",
+                "text": "Saiba Mais",
+                "spans": []
+              }
+            ]
+          }
+        ],
+        "slice_type": "banner",
+        "slice_label": null
+      }
+    ]
+  }
+}
