@@ -12,7 +12,7 @@ export function Footer() {
         <span>(31) 99453-1287</span>
       </div>
       <p>Atendimento de segunda a sábado </p>
-      <strong>08:00 as 15:00</strong>
+      <strong>08:00 as 18:00</strong>
     </div>
   );
 }

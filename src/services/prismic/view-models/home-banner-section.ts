@@ -2,6 +2,7 @@ export type Banner = {
   urlImage: string;
   description: string;
   urlService: string;
+  slug: string;
 };
 export type HomeBannerSection = {
   banners: Banner[];
@@ -14,7 +15,7 @@ export const mapPrismicHomeBannerSection = (data: any): HomeBannerSection => {
     return {
       urlImage: item.img.url,
       description: item.description[0].text,
-      urlService: item.link.url
+      slug: item.slug[0].text
     };
   });
 
