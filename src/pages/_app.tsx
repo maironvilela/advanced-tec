@@ -20,7 +20,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />
         <FloatingButton />
-
       </PrismicPreview>
     </PrismicProvider>
   );
