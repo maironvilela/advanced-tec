@@ -19,6 +19,7 @@ export type Banner = {
   urlImage: string;
   description: string;
   urlService: string;
+  slug: string;
 };
 
 type PageProps = {
