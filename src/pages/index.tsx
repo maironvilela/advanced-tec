@@ -1,4 +1,3 @@
-import * as prismicH from '@prismicio/helpers';
 import type { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { About } from '../components/About';
@@ -8,10 +7,13 @@ import { Header } from '../components/Header';
 import { Services } from '../components/services';
 import { WhyChoose } from '../components/why-choose';
 import { createClient } from '../services/prismic';
+import { mapPrismicHomeAboutSection } from '../services/prismic/view-models/home-about-section';
+import { mapPrismicHomeBannerSection } from '../services/prismic/view-models/home-banner-section';
 import {
   mapPrismicHomeServiceSection,
   Service
 } from '../services/prismic/view-models/home-service-section';
+import { mapPrismicWhyChooseSection } from '../services/prismic/view-models/home-why-choose-section';
 
 export type Banner = {
   urlImage: string;
@@ -56,18 +58,6 @@ export default function Home({ page }: PageProps) {
       />
 
       <Footer />
-      <div dangerouslySetInnerHTML={{ __html: aboutTitle.text }}></div>
-
-      {/*  
-     
-
-    <Header />
-      <About />
-      <WhyChoose />
-
-      <div dangerouslySetInnerHTML={{ __html: about.content }}></div>
-            
-      */}
     </>
   );
 }
@@ -75,36 +65,21 @@ export default function Home({ page }: PageProps) {
 export const getStaticProps: GetStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
 
-  const response = await client.getByUID('page', 'home-page');
+  const { data } = await client.getByUID('page', 'home-page');
 
-  const aboutTitle = response.data['about-title'][0];
+  const banners = mapPrismicHomeBannerSection(data);
 
-  const banners = response.data.body[0].items.map((item: any) => {
-    return {
-      urlImage: item.img.url,
-      description: item.description[0].text,
-      urlService: item.link.url
-    };
-  });
+  const about = mapPrismicHomeAboutSection(data);
 
-  const about = {
-    title: prismicH.asText(response.data['about-title']),
-    content: prismicH.asHTML(response.data['about-content'])
-  };
+  const whyChoose = mapPrismicWhyChooseSection(data);
 
-  const whyChoose = {
-    title: prismicH.asHTML(response.data['why-choose-title']),
-    content: prismicH.asHTML(response.data['why-choose-content'])
-  };
-
-  const serviceSection = mapPrismicHomeServiceSection(response.data.body);
+  const serviceSection = mapPrismicHomeServiceSection(data);
 
   const page = {
     banners,
     about,
     whyChoose,
-    serviceSection,
-    aboutTitle
+    serviceSection
   };
 
   return {

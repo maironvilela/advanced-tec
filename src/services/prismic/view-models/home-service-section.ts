@@ -13,8 +13,8 @@ export type HomeServiceSection = {
   services: Service[];
 };
 
-export const mapPrismicHomeServiceSection = (body: any): HomeServiceSection => {
-  const serviceSectionContent = body[1];
+export const mapPrismicHomeServiceSection = (data: any): HomeServiceSection => {
+  const serviceSectionContent = data.body[1];
 
   const sectionTitle =
     serviceSectionContent.primary['section-service-title'][0].text;
