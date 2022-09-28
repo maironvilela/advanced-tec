@@ -18,13 +18,20 @@
     background-color: var(--blue-300);
 
     transition: all 0.5s;
- 
+
+    li{
+      visibility: hidden;
+    } 
   } 
 }
-
 .showMenu{
   ul{
     height: 100vh;
+
+    li{
+      visibility:visible;
+
+    }
   }
  }
  
