@@ -1,0 +1,33 @@
+.nav{
+  position: absolute;
+  left:0;
+  top: 5rem;
+  width: 100vw;
+  color: var(--white);
+  font-size: 2rem;
+ 
+
+ ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 2rem;
+    height: 0;
+
+    background-color: var(--blue-300);
+
+    transition: all 0.5s;
+ 
+  } 
+}
+
+.showMenu{
+  ul{
+    height: 100vh;
+  }
+ }
+ 
+ 
+
+ 

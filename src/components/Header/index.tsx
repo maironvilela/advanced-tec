@@ -1,38 +1,34 @@
+import { FiMenu, FiX } from 'react-icons/fi';
 import styles from './header.module.scss';
 
 import Image from 'next/image';
+import { useState } from 'react';
 import logo from '../../../public/images/logo.svg';
-import { Link } from '../Link';
+import { Menu } from './Menu';
 
 type HeaderProps = {
   page?: string;
 };
 
 export function Header({ page = 'HOME' }: HeaderProps) {
+  const [isShowMenu, setIsShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setIsShowMenu(!isShowMenu);
+  };
+
   return (
     <header className={styles.container}>
-      <Image src={logo} alt="Logo Advanced Tec" />
+      <Image src={logo} alt="Logo Advanced Tec" className={styles.logo} />
+      <>
+        <Menu isShowMenu={isShowMenu} />
 
-      <nav>
-        <ul>
-          <Link description="HOME" isActive={page === 'HOME'} href="/" />
-          <Link
-            description="AUTOMAÇÃO"
-            isActive={page === 'automacao'}
-            href="/servicos/automacao"
-          />
-          <Link
-            description="AUDIO E VIDEO"
-            isActive={page === 'AUDIO E VIDEO'}
-            href="/servicos/audio-video"
-          />
-          <Link
-            description="SEGURANÇA ELETRÔNICA"
-            isActive={page === 'SEGURANCA ELETRONICA'}
-            href="/servicos/seguranca-eletronica"
-          />
-        </ul>
-      </nav>
+        {isShowMenu ? (
+          <FiX color="#FFFF" onClick={() => toggleMenu()} />
+        ) : (
+          <FiMenu color="#FFFF" onClick={() => toggleMenu()} />
+        )}
+      </>
     </header>
   );
 }

@@ -1,24 +1,33 @@
-.container{
+.container{ 
   z-index: 9999;
   opacity: 0.9;
   position: fixed;
   padding: 1rem;
   background: var(--blue-300);
-  max-height: 9rem;
+  max-height: 5rem;
   width: 100vw;
 
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content:space-between;
  
-  nav{
+
+  @media screen and (min-width: 800px) {
+    background: red;
+    nav{
+    display: block;
     color: var(--white);
-    margin-left: auto;
-    li{
-      display: inline;
-      margin-right: 2rem;
-    } 
-  
-  }
+    margin-left: auto;  
+   li{
+     display: inline;
+     margin-right: 2rem;
+   } 
  
+ }
+    
+  } 
 }
+
+ 
+ 
