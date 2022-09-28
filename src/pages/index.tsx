@@ -1,5 +1,6 @@
 import type { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
+import { About } from '../components/About';
 import { Carousel } from '../components/Carousel';
 import { Header } from '../components/Header';
 import { createClient } from '../services/prismic';
@@ -47,9 +48,9 @@ export default function Home({ page }: PageProps) {
     <>
       <Header />
       <Carousel banners={banners} />
+      <About title={about.title} content={about.content} />
 
       {/**
-      <About title={about.title} content={about.content} />
       <WhyChoose title={whyChoose.title} content={whyChoose.content} />
       <Services
         sectionTitle={serviceSection.sectionTitle}
