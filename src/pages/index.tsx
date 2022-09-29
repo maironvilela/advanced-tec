@@ -2,6 +2,7 @@ import type { GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import { About } from '../components/About';
 import { Carousel } from '../components/Carousel';
+import { Footer } from '../components/footer';
 import { Header } from '../components/Header';
 import { Services } from '../components/services';
 import { WhyChoose } from '../components/why-choose';
@@ -57,10 +58,7 @@ export default function Home({ page }: PageProps) {
         services={serviceSection.services}
       />
 
-      {/**
-  
-
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

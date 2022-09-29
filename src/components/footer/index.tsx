@@ -8,8 +8,9 @@ export function Footer() {
       <h2>Faça seu orçamento</h2>
       <span>sem compromisso</span>
       <div>
+        {/* Alterar tamanho do icone do whatsapp */}
         <Image src={iconWhatsAppWhite} alt="Icone Whats App" />
-        <span>(31) 99453-1287</span>
+        <h2>(31) 98720-5436</h2>
       </div>
       <p>Atendimento de segunda a sábado </p>
       <strong>08:00 as 18:00</strong>

@@ -1,5 +1,5 @@
 .container{
-  padding: 5rem 0;
+  padding: 2rem 0;
   background: var(--blue-200);
   width: 100%;
   color: var(--white);
@@ -8,20 +8,21 @@
   flex-direction: column;
   align-items: center;
 
+  h2{
+    font-size: var(--sm-h2);
+   }
+
   >span{
     margin: 1rem 0;
     padding: 1rem 2rem;
     background: var(--blue-100);
     border-radius: 50px;
+    margin-top: 2rem;
   }
 
   >div{
     margin-top: 1rem;
-    display: flex;
-    align-items: center;  
-    font-size: 2.4rem;
-    
-       
+    display: flex;          
   }
 
   p{
@@ -29,6 +30,26 @@
     line-height: 4rem;
   }
 
-  strong{
-   }
+  @media (min-width: 481px){
+    h2{
+      font-size: var(--md-h2);
+     }
+
+     span, p, strong{
+      font-size: var(--md-fs)
+     }
+
+      
+  }
+  @media (min-width: 769px){
+    h2{
+      font-size: var(--lg-h2);
+     }
+
+     span, p, strong{
+      font-size: var(--lg-fs)
+     }
+  }
+
+  
 }

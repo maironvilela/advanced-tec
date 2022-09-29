@@ -32,7 +32,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    padding:2rem 1rem;
+    padding:2rem 5rem;
     gap: 1rem;
     border-bottom: solid 1px var(--blue-300);
 
@@ -85,7 +85,7 @@
       margin-top: 5rem;
 
       img{
-        width: 60rem;
+        width: 30rem;
        }
 
       >div{
@@ -113,27 +113,4 @@
 
 
 
-
-/*
-  .item-service-link-right{
-    margin: 3rem 0;
-     display: flex;
-    align-items: center;
-
-    a{
-      margin-left: auto;
-    }
  
-    div{
-       margin-left: 2rem;
-      display: flex;
-      flex-direction:column;
-      align-items: flex-start;
-      
-     }
- 
-    h3{
-       margin-bottom: 2rem;
-    }
-    
-  }*/
