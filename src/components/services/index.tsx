@@ -11,17 +11,18 @@ export function Services({ sectionTitle, services }: ServicesProps) {
       </header>
 
       {services.map((service) => (
-        <div className={styles['item-service']} key={service.serviceTitle}>
-          <img src={service.urlImage} alt="Imagem casa com automação" />
-          <div>
-            <h3>{service.serviceTitle}</h3>
-            <div
-              dangerouslySetInnerHTML={{ __html: service.description.text }}
-            ></div>
-
-            <a href={`./servicos/${service.slug}`}>+ Detalhes</a>
+        <>
+          <div className={styles['item-service']} key={service.serviceTitle}>
+            <img src={service.urlImage} alt="Imagem casa com automação" />
+            <div>
+              <h2>{service.serviceTitle}</h2>
+              <p
+                dangerouslySetInnerHTML={{ __html: service.description.text }}
+              ></p>
+              <a href={`./servicos/${service.slug}`}>+ Detalhes</a>
+            </div>
           </div>
-        </div>
+        </>
       ))}
     </section>
   );

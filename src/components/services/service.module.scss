@@ -1,18 +1,15 @@
 .container{
-  padding:  0 10rem;
+  padding: 1rem;
   color: var(--blue-300);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
   line-height: 2.5rem; 
-
-
   a{
     color: var(--blue-100);
     transition: 0.5s;
     margin-top: 2rem;
-    padding: 1rem 3rem;  
+    padding: 0.5rem 4rem;  
     border-radius: 50px;
     border: 1px solid var(--blue-100);
  
@@ -24,29 +21,100 @@
   }
 
   header{
-    margin: 5rem 0;
+    margin: 1rem 0;
+    h1{
+      font-size: var(--sm-h1)
+    }
   }
 }
  
   .item-service{
-    margin: 3rem 0;
-     display: flex;
+    display: flex;
+    flex-direction:column;
     align-items: center;
- 
-    div{
-       margin-left: 2rem;
+    padding:2rem 1rem;
+    gap: 1rem;
+    border-bottom: solid 1px var(--blue-300);
+
+    >div{
       display: flex;
       flex-direction:column;
-      align-items: flex-start;
-      
-     }
- 
-    h3{
-       margin-bottom: 2rem;
+      align-items: center;
+      justify-content:center;
+
     }
-    
+
+    img{
+      width: 16rem;
+    }
+
+    h2{
+      line-height: 4rem; 
+      text-align:center;
+      text-transform: capitalize;
+
+      font-size: var(--sm-h2);
+      color: red;
+    }
+
+    p{
+      margin-top: 1.6rem;
+      padding: 0 2rem;
+      text-align: justify;
+      font-size: var(--sm-fs);
+
+    }
+
+    @media (min-width: 481px){
+      h2{
+        font-size: var(--md-h2);
+        padding-bottom: 2rem;
+      }
+
+      p{
+        font-size: var(--md-fs);
+
+      }
+    }
+
+
+    @media (min-width: 769px){
+      display: flex;
+      flex-direction: row;
+      border-bottom: none;
+      margin-top: 5rem;
+
+      img{
+        width: 60rem;
+       }
+
+      >div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        h2{
+          font-size: var(--lg-h2);
+          text-align: left;
+         }      
+
+        p{
+          font-size: var(--lg-fs);
+          padding: 0;
+          display: block;
+         }
+      }
+ 
+ 
+
+   
+    }    
   }
 
+
+
+
+/*
   .item-service-link-right{
     margin: 3rem 0;
      display: flex;
@@ -68,4 +136,4 @@
        margin-bottom: 2rem;
     }
     
-  }
+  }*/
