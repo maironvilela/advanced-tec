@@ -1,7 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 export default class MyDocument extends Document {
-  favIcon = 'https://www.pngrepo.com/png/24760/512/open.png';
+  favIcon = './images/logo.svg';
   render() {
     return (
       <Html>

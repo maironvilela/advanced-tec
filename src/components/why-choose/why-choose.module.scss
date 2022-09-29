@@ -4,32 +4,101 @@
     padding: 2rem;
     background-image: url(https://avatars.mds.yandex.net/i?id=5117bc7e6717ca6b428f7c7dc372f6c1-5498962-images-thumbs&n=13);
     background-size: cover;
-    background-repeat: no-repeat;
-
-   
+    background-repeat: no-repeat;   
   
   h1{
-   text-align: center;
-   margin-bottom: 2rem;
-   padding: 0 10rem;
-   color: var(--white);
-   margin-bottom: 5rem;
- } 
+    width: 100%;
+    font-size: var(--sn-h1);
+    margin-bottom: 2rem;
+    color: var(--white);
+    margin-bottom: 5rem;
+    text-align: center;
+  }  
 
- .content{
-  position: relative;
+  @media (min-width: 481px) {
+    h1{
+        font-size: var(--md-h1);
+        padding: 0 1rem;
+      }
+  }
 
-  display: grid;	
-  grid-template-columns: 1fr 40rem ;
-    
-    li{
-      display: flex;
+  @media (min-width: 769px) {
+    h1{
+        font-size: var(--lg-h1);
+        padding: 0 1rem;
+      }
+  }
+  @media (min-width: 1160px) {
+    h1{
+        font-size: calc(var(--lg-h1) + 8px);
+        padding: 0 1rem;
+      }
+  }
+  
+}
+
+ .content{   
+    position:relative;     
+    li{      
       list-style-type: none;
       color: var(--white);
-      line-height:5rem;
-      font-size: 2.2rem;
+      line-height:4rem;
+      font-size: var(--sm-fs);
       font-weight: bold;
-      margin-left: 15rem;
-    } 
- } 
-}
+     }      
+    
+     img{
+      display: none!important;      
+     } 
+
+    @media (min-width: 481px) {
+        display: grid;	
+        grid-template-columns: 1fr 10rem ;
+        img{
+          display: block!important; 
+          width: 20rem!important; 
+        }
+        li{                
+            font-size: var(--md-fs);          
+         } 
+    }
+
+    @media (min-width: 600px) {
+      display: grid;	
+      grid-template-columns: 1fr 25rem ;
+      img{
+        display: block!important; 
+        width: 60rem!important; 
+      }
+    }
+
+    @media (min-width: 769px) {
+      display: grid;	
+      grid-template-columns: 50rem 1fr ;
+     img{
+        display: block!important; 
+        width: 100rem!important; 
+     }
+     li{
+      line-height:5rem;
+      font-size: var(--lg-fs);
+     }
+    }   
+
+    @media (min-width: 1160px) {
+      display: grid;	
+      grid-template-columns:  1fr 60rem ;
+      img{
+        display: block!important; 
+        width: 100rem!important; 
+     }
+      li{
+        line-height:5rem;
+        font-size: calc(var(--lg-fs) + 8px);
+
+       }
+    }   
+} 
+
+
+ 
